@@ -4,10 +4,15 @@
 
 :root {
   --main-red-color: #e06262;
+  --main-black-color: #2f2f2f;
 }
 
 .main-red-color {
   color: var(--main-red-color);
+}
+
+.main-black-color {
+  color: var(--main-black-color);
 }
 
 html {
@@ -20,7 +25,7 @@ body {
   align-content: center;
   align-items: center;
 
-  background-color: #2f2f2f;
+  background-color: var(--main-black-color);
   height: 100vh;
 }
 
@@ -76,6 +81,20 @@ html {
   outline: unset;
 }
 
+.header-btn.main-red-color:active {
+  text-shadow: 1px 1px 2px var(--main-red-color);
+}
+
+.header-btn.main-black-color:active {
+  text-shadow: 1px 1px 2px var(--main-black-color);
+}
+
+.add-btn.main-black-color:active {
+text-shadow: 1px 1px 2px var(--main-black-color);
+}
+
+
+
 .add {
   padding: 16px;
 }
@@ -111,4 +130,30 @@ html {
   background: unset;
   border: unset;
   outline: unset;
+}
+
+
+.todos {
+display: flex;
+flex-direction: column;
+}
+
+.todo {
+position: relative;
+
+flex: 1 0 auto;
+text-align: center;
+
+min-height: 34px;
+margin: 16px 0 0;
+font-family: "Homemade Apple", sans-serif;
+font-size: 24px;
+
+border-bottom: 1px solid var(--main-red-color);
+}
+
+.todo-text {
+position: absolute;
+left: 50%;
+transform: translate(-50%);
 }
